@@ -1,0 +1,232 @@
+/* ==========================================================================
+  Check Box
+   ========================================================================== */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox-side{
+  float: left;
+  width: 50%
+}
+
+/* ==========================================================================
+  Tab Filter
+   ========================================================================== */
+.tab-filter {
+  width: 100%;
+  height: 80px;
+  display: table;
+  margin-bottom: 0;
+  background-color: #fff;
+  border: 0.5px solid #ddd;
+}
+.tab-filter>a.tab-bar_header {
+  padding: 0 12px;
+  background-color: #f7f7f7;
+  border-right: 1px solid #ddd;
+  cursor: default;
+}
+.tab-filter>a.tab-bar_header:hover{
+  color: #777;
+}
+.tab-filter_col-4>a.tab-bar_header {
+  width: 12%;
+}
+.tab-filter a {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  width: 20%;
+  padding: 0 10px;
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: left;
+  color: #777;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+}
+.tab-filter a:hover {
+  color: #3498db;
+}
+.tab-filter a.active {
+  color: #fff;
+  background-color: #3498db;
+}
+.tab-filter span{
+  font-size: 18px;
+}
+.tabcontent {
+  display: none;
+  margin-top: 20px;
+}
+
+/* ==========================================================================
+  Modal For Extras
+   ========================================================================== */
+.modal-content {
+  background-color: #fefefe;
+  width: 100%;
+}
+
+.modal-header{
+  background-color: #3498db;
+}
+
+.modal-header .modal-title{
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.close {
+  color: #fff;
+  float: right;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.lead{
+  font-size: 15px;
+}
+
+.lead-margin{
+  margin-top: 25px;
+}
+
+/* ==========================================================================
+  Rental Details 
+   ========================================================================== */
+#rental{
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+/* ==========================================================================
+  Vehicle 
+   ========================================================================== */
+.vertical-line{
+  border-left: 2px solid #eee;
+  height: 50px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.btn-select{
+  width: 95%; 
+  margin-top: 5%;
+}
+.item-description{
+  font-weight: 400;
+  text-align: center;
+  font-size: 15px;
+}
+.item-li{
+  display: inline-block;
+  color: #444;
+  margin-right: 15px;
+}
+
+.transmission{
+  background-image: url('img/transmission.png');
+}
+.feature-price{
+  margin: 0;
+  padding: 0;
+  background: none;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1em;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: inherit;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 15px;
+  color: #3498db;
+  text-transform: uppercase;
+}
+
+.feature-details{
+  margin-top: 20px;
+}
+
+.feature-li{
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.feature-li:before{
+  content: "\2022 ";
+}
